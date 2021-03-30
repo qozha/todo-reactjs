@@ -16,7 +16,7 @@ While still in the 'backend' folder run
 
 ### node server.js
 
-Move up one folder and run
+Launch new terminal, go to root folder and run
 
 ### yarn start
 
