@@ -20,7 +20,7 @@ Launch new terminal, go to root folder and run
 
 ### yarn start
 
-### OR
+## OR
 
 Run it using docker-compose by running:
 
