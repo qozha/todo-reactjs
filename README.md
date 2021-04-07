@@ -20,6 +20,16 @@ Launch new terminal, go to root folder and run
 
 ### yarn start
 
+## OR
+
+Run it using docker-compose by running:
+
+### docker-compose build
+
+in root folder, then
+
+### docker-compose up
+
 Now the app should be running at:
 
 http://localhost:3000/
