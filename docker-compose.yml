@@ -1,0 +1,34 @@
+version: '3.7'
+services:
+
+  todo-backend:
+    build: ./backend
+    container_name: todo-backend
+    ports:
+      - 4000:4000
+
+  todo-frontend:
+    build: ./
+    container_name: todo-frontend
+    # volumes:
+    #   - '.:/app'
+    #   - '/app/node_modules'
+    links:
+      - todo-backend
+    ports:
+      - 3000:3000
+    stdin_open: true
+    # environment:
+    #   - CHOKIDAR_USEPOLLING=true
+
+#   kanban-ui:
+#     build: ./kanban-ui
+#     container_name: kanban-ui
+#     ports:
+#       - 4200:80
+#     links:
+#       - kanban-app
+
+
+volumes:
+  kanban-data:
