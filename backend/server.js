@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const Todo = require("./models/Todo");
 const { remove } = require("./models/Todo");
 
-mongoose.connect("mongodb+srv://dbQozha:qwerty121@cluster0.zh15d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect("mongodb://mongodb:27017/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true });
 
 mongoose.connection.once("open", () => {
   console.log("Mongodb connection established successfully");

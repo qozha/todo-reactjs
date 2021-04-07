@@ -1,11 +1,26 @@
-version: '3.7'
+version: '3.8'
 services:
+
+  mongodb:
+    image : mongo
+    container_name: mongodb
+    environment:
+    - PUID=1000
+    - PGID=1000
+    volumes:
+    - .mongodb/database:/data/db
+    ports:
+    - 27017:27017
+    restart: unless-stopped
+
 
   todo-backend:
     build: ./backend
     container_name: todo-backend
     ports:
       - 4000:4000
+    links:
+      - mongodb
 
   todo-frontend:
     build: ./
